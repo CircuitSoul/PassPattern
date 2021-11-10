@@ -3,7 +3,7 @@ import re
 senhasValidas = []
 
 def filtro(anypass):
-  pattern = re.compile(r'''^.*(?=.{1,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!_.'@#$%*?;>)"(<^&+=]).*$''') #ty allan garcez
+  pattern = re.compile(r'''^.*(?=.{1,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!_\/\\'.\-\¨@#$%*?;>)"(<^&+=]).*$''') #ty allan garcez
   findings = re.findall(pattern, anypass)
   if len(findings)>0:
     senhasValidas.append(anypass)
